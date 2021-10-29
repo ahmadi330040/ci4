@@ -8,6 +8,7 @@ class KomikModel extends Model
 {
     protected $table = 'blog';
     protected $useTimestaps = true;
+    protected $allowedFields = ['judul','slug','author','deskripsi_display','imgpath','content'];
 
     public function getKomik($slug = false)
     {
