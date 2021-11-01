@@ -8,6 +8,7 @@
             <form action="/komik/update/<?= $komik['id']; ?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <input type="hidden" name="slug" value="<?= $komik['slug']; ?>">
+                <input type="hidden" name="imgpathLama" value="<?= $komik['imgpath']; ?>">
                 <div class="mb-3">
                     <label for="judul" class="form-label">Judul</label>
                     <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" id="judul" name="judul" aria-describedby="judul" autofocus value="<?= (old('judul')) ? old('judul') : $komik['judul'] ?>">
@@ -27,8 +28,9 @@
                     <label for="imgpath" class="form-label">Gambar</label>
                     <div class="col-sm-2 my-3">
                         <img src="/img/<?= $komik['imgpath'] ?>" class="img-thumbnail img-preview">
+                        <label class="my-1" for="lblPrev"><?= $komik['imgpath'] ?></label>
                     </div>
-                    <input class="form-control <?= ($validation->hasError('imgpath')) ? 'is-invalid' : ''; ?>" type="file" id="imgpath" name="imgpath" onchange="previewImg()">
+                    <input class="form-control <?= ($validation->hasError('imgpath')) ? 'is-invalid' : ''; ?>" type="file" id="imgpath" name="imgpath" onchange="previewImg()" value="<?= $komik['imgpath'] ?>">
                     <div class="invalid-feedback">
                         <?= $validation->getError('imgpath'); ?>
                     </div>

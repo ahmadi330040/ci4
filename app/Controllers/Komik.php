@@ -154,11 +154,35 @@ class Komik extends BaseController
                     'required' => '{field} komik harus diisi',
                     'is_unique' => '{field} komik sudah ada'
                 ]
+                ],
+            'imgpath' => [
+                'rules' => 'max_size[imgpath,1024]|is_image[imgpath]|mime_in[imgpath,imgae/jpg,image/jpeg,image/jpg,image/png]',
+                'errors' => [
+                    'max_size' => 'Ukuran gambar terlalu besar',
+                    'is_image' => 'Yang anda pilih bukan gambar',
+                    'mime_in' => 'Yang anda pilih bukan gambar'
                 ]
+            ]
         ])) {
-            // $validation = \Config\Services::validation();
-            // return redirect()->to('/komik/edit/' . $this->request->getVar('slug'))->withInput()->with('validation', $validation);
             return redirect()->to('/komik/edit/' . $this->request->getVar('slug'))->withInput();
+        }
+
+        $fileImage = $this->request->getFile('imgpath');
+
+        // cek gambar, apakah gambar lama
+
+        if($fileImage->getError() == 4) {
+            $namaImage = $this->request->getVar('imgpathLama');
+        } else {
+
+            //get nama image
+            $namaImage = $fileImage->getName();
+
+            //pindahkan gambar ke folder img
+            $fileImage->move('img', $namaImage);
+
+            //Hapus file yang lama
+            // unlink('img/' . $this->request->getVar('imgpathLama'));
         }
 
         $slug = url_title($this->request->getVar('judul'), '-', true);
@@ -168,7 +192,7 @@ class Komik extends BaseController
             'slug' => $slug,
             'author' => $this->request->getVar('author'),
             'deskripsi_display' => $this->request->getVar('deskripsi_display'),
-            'imgpath' => $this->request->getVar('imgpath'),
+            'imgpath' => $namaImage,
             'content' => $this->request->getVar('content')
         ]);
 
