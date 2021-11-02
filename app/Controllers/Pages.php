@@ -7,37 +7,31 @@ class Pages extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Home | My Pay',
-            'tes' => ['satu', 'dua', 'tiga']
+            'title' => 'Aplikasi Pulsa & PPOB My Pay',
         ];
-        return view('pages/home', $data);
+        return view('website/pages/home', $data);
     }
 
-    public function about()
+    public function produk()
     {
         $data = [
-            'title' => 'About Me'
+            'title' => 'Produk'
         ];
-        return view('pages/about', $data);
+        return view('website/pages/produk', $data);
     }
-
     public function contact()
     {
         $data = [
-            'title' => 'Daftar Contact',
-            'alamat' => [
-                [
-                    'tipe' => 'Rumah',
-                    'alamat' => 'Jl. Gg benda no:31',
-                    'kota' => 'Pati'
-                ],
-                [
-                    'tipe' => 'Rumah',
-                    'alamat' => 'Jl. Gg benda no:31',
-                    'kota' => 'Jakarta'
-                ]
-            ]
+            'title' => 'Contact'
         ];
-        return view('pages/contact', $data);
+        return view('website/pages/contact', $data);
     }
+    public function panduan()
+    {
+        $data = [
+            'title' => 'Panduan'
+        ];
+        return view('website/pages/panduan', $data);
+    }
+
 }

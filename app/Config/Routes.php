@@ -23,6 +23,7 @@ $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
 
+
 /*
  * --------------------------------------------------------------------
  * Route Definitions
@@ -32,12 +33,21 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::index');
+$routes->get('/produk', 'Pages::produk');
+$routes->get('/contact', 'Pages::contact');
+$routes->get('/panduan', 'Pages::panduan');
 
 
-$routes->get('/komik/create', 'Komik::create');
-$routes->get('/komik/edit/(:segment)', 'Komik::edit/$1');
-$routes->delete('/komik/(:num)', 'Komik::delete/$1');
-$routes->get('/komik/(:any)', 'Komik::detail/$1');
+// Halaman admin
+$routes->get('/admin', 'Admin/Home::index');
+$routes->get('/admin/blog', 'Admin/Blog::index');
+
+
+
+// $routes->get('/komik/create', 'Komik::create');
+// $routes->get('/komik/edit/(:segment)', 'Komik::edit/$1');
+// $routes->delete('/komik/(:num)', 'Komik::delete/$1');
+// $routes->get('/komik/(:any)', 'Komik::detail/$1');
 
 /*
  * --------------------------------------------------------------------
