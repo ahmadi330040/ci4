@@ -22,16 +22,6 @@
                             <span class="link-collapse">My Profile</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#edit">
-                            <span class="link-collapse">Edit Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#settings">
-                            <span class="link-collapse">Settings</span>
-                            </a>
-                        </li>
                         </ul>
                     </div>
                     </div>
@@ -45,12 +35,12 @@
                     <h4 class="text-section">Menu</h4>
                     </li>
                     <li class="nav-item">
-                    <a data-toggle="collapse" href="#forms">
+                    <a data-toggle="collapse" href="#blogs">
                         <i class="fas fa-pen-square"></i>
                         <p>Blogs</p>
                         <span class="caret"></span>
                     </a>
-                    <div class="collapse" id="forms">
+                    <div class="collapse" id="blogs">
                         <ul class="nav nav-collapse">
                         <li>
                             <a href="/admin/blog">
@@ -61,16 +51,21 @@
                     </div>
                     </li>
                     <li class="nav-item">
-                    <a data-toggle="collapse" href="#sidebarLayouts">
+                    <a data-toggle="collapse" href="#panduan">
                         <i class="fas fa-th-list"></i>
                         <p>Panduan</p>
                         <span class="caret"></span>
                     </a>
-                    <div class="collapse" id="sidebarLayouts">
+                    <div class="collapse" id="panduan">
                         <ul class="nav nav-collapse">
                         <li>
-                            <a href="/daftar-panduan">
-                            <span class="sub-item">Daftar Panduan</span>
+                            <a href="/admin/panduan-deposit">
+                            <span class="sub-item">Panduan Deposit</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/panduan-transaksi">
+                            <span class="sub-item">Panduan Transaksi</span>
                             </a>
                         </li>
                         </ul>

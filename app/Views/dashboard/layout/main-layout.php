@@ -40,7 +40,7 @@
             <!-- Logo Header -->
             <div class="logo-header" data-background-color="red">
 
-                <a href="/" class="logo">
+                <a href="/admin" class="logo">
                     <img src="../dashboard/assets/img/mypay-logo.png" alt="navbar brand" class="navbar-brand" width="108" height="35">
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse"

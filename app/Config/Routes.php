@@ -40,7 +40,14 @@ $routes->get('/panduan', 'Pages::panduan');
 
 // Halaman admin
 $routes->get('/admin', 'Admin/Home::index');
+
 $routes->get('/admin/blog', 'Admin/Blog::index');
+
+$routes->get('/admin/panduan-deposit', 'Admin/PanduanDeposit::index');
+$routes->get('/admin/tambah-panduan-deposit', 'Admin/PanduanDeposit::tambahPanduan');
+
+$routes->get('/admin/panduan-transaksi', 'Admin/PanduanTransaksi::index');
+$routes->get('/admin/tambah-panduan-transaksi', 'Admin/PanduanTransaksi::tambahPanduan');
 
 
 
