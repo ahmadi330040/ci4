@@ -5,6 +5,7 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 
 use App\Models\PanTransaksiModel;
+use Error;
 
 class PanduanTransaksi extends BaseController
 {
@@ -35,28 +36,20 @@ protected $PanTransaksiModel;
             'validation' => \Config\Services::validation()
         ];
         
-        return view('dashboard/pages/tambah-panduan-transaksi', $data,);
+        return view('dashboard/pages/tambah-panduan-transaksi', $data);
         }
+    }
+
+    public function delete($id)
+    {     
+        $this->PanTransaksiModel->delete($id);
+        session()->setFlashdata('pesan', 'Data berhasil dihapus.');
+        return redirect()->to('/admin/panduan-transaksi');
     }
 
     public function save() 
     {
-
-        if(!$this->validate([
-            'judul' => [
-                'rules' => 'required|is_unique[panduan-transaksi.judul_trx]',
-                'errors' => [
-                    'required' => '{field} komik harus diisi',
-                    'is_unique' => '{field} komik sudah ada'
-                ]
-            ]
-        ])) {
-            // $validation = \Config\Services::validation();
-            // return redirect()->to('/komik/create/' . $this->request->getVar('slug'))->withInput()->with('validation', $validation);
-            return redirect()->to('/admin/tambah-panduan-transaksi')->withInput();
-        }
-
-        $this->KomikModel->save([
+        $this->PanTransaksiModel->save([
             'judul_trx' => $this->request->getVar('judul_trx'),
             'format_trx' => $this->request->getVar('format_trx'),
             'contoh_trx' => $this->request->getVar('contoh_trx')

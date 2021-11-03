@@ -32,11 +32,14 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+// Halaman Website
 $routes->get('/', 'Pages::index');
 $routes->get('/produk', 'Pages::produk');
 $routes->get('/contact', 'Pages::contact');
 $routes->get('/panduan', 'Pages::panduan');
-
+$routes->get('/blog', 'Pages::blog');
+$routes->get('/blog-detail', 'Pages::blogDetail');
 
 // Halaman admin
 $routes->get('/admin', 'Admin/Home::index');
@@ -47,7 +50,10 @@ $routes->get('/admin/panduan-deposit', 'Admin/PanduanDeposit::index');
 $routes->get('/admin/tambah-panduan-deposit', 'Admin/PanduanDeposit::tambahPanduan');
 
 $routes->get('/admin/panduan-transaksi', 'Admin/PanduanTransaksi::index');
+$routes->delete('/admin/panduan-transaksi/(:num)', 'Admin/PanduanTransaksi::delete/$1');
 $routes->get('/admin/tambah-panduan-transaksi', 'Admin/PanduanTransaksi::tambahPanduan');
+$routes->post('/tambah-panduan-transaksi/save', 'Admin/PanduanTransaksi::save');
+
 
 
 

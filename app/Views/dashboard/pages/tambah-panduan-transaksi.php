@@ -23,11 +23,14 @@
         <div class="card-body">
           <div class="row">
             <div class="col-md-12">
-            <form action="PanduanTransaksi/save" method="post" enctype="multipart/form-data">
+            <form action="/tambah-panduan-transaksi/save" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="mb-3">
                     <label for="judul_trx" class="form-label">Judul</label>
                     <input type="text" class="form-control" id="judul_trx" name="judul_trx" value="" autofocus>
+                    <div class="invalid-feedback">
+                        <?= $validation->getError('judul'); ?>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="format_trx" class="form-label">Format Transaksi</label>

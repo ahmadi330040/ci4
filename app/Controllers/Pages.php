@@ -33,5 +33,18 @@ class Pages extends BaseController
         ];
         return view('website/pages/panduan', $data);
     }
-
+    public function blog()
+    {
+        $data = [
+            'title' => 'Blogs'
+        ];
+        return view('website/pages/blog', $data);
+    }
+    public function blogDetail()
+    {
+        $data = [
+            'title' => 'Blogs'
+        ];
+        return view('website/pages/blog-detail', $data);
+    }
 }

@@ -38,6 +38,7 @@
                            <li><a href="/">Home</a></li>
                            <li><a href="/produk">Produk</a></li>
                            <li><a href="/panduan">Panduan</a></li>
+                           <li><a href="/blog">Blog</a></li>
                            <li><a href="/contact">Kontak Kami</a></li>
                            <li><a href="https://report.mypay.co.id/">Login</a></li>
                         </ul>

@@ -45,9 +45,10 @@
                   <td><?= $d['format_trx']; ?></td>
                   <td>
                     <a href="edit-users/" class="btn btn-success badge rounded-pill btn-xs"><i class="fas fa-edit"></i> edit</a>
-                    <form action="/daftar-users?_method=DELETE" method="POST" class="d-inline" onclick="return confirm('yakin akan dihapus?')">
-                      <input type="hidden" name="_id" value="" />
-                      <button type="submit" class="btn btn-danger badge rounded-pill btn-xs"><i class="fas fa-trash-alt"></i> hapus</button>
+                    <form action="/admin/panduan-transaksi/<?= $d['id']; ?>" method="post" class="d-inline">
+                      <?= csrf_field(); ?>
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button type="submit" class="btn btn-danger badge rounded-pill btn-xs" onclick="return confirm('Apakah yakin akan dihapus?');">Hapus</button>
                     </form>
                   </td>
                 </tr>
