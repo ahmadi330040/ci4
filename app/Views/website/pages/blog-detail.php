@@ -48,6 +48,26 @@
                                 <a href="#">By: Jhony Deep</a>
                                 <a href="#"> Nov. 02, 2019</a>
                             </p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea assumenda veniam iure id saepe. Iusto ratione deleniti tenetur tempora similique excepturi quisquam, facilis ipsam autem nam soluta architecto doloribus? Saepe tempore adipisci itaque a veniam sapiente vitae odit, beatae reprehenderit fugit vero alias et libero, pariatur voluptatibus recusandae cum error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt inventore, unde consequatur harum id autem sed repellendus minima voluptatum distinctio in eligendi tenetur. Ratione impedit culpa neque soluta unde enim quod corporis ipsum quaerat. Dignissimos quia voluptas debitis eius magni saepe veritatis, qui, quidem suscipit dolor ipsam ipsa nulla eum numquam commodi delectus quos exercitationem quisquam cupiditate omnis eveniet culpa ab sequi odio. Nam, temporibus laboriosam. Maiores saepe aliquid delectus iste molestias modi numquam ullam recusandae nisi molestiae quisquam neque sapiente asperiores, veniam iure magnam ducimus, aperiam voluptatum! Dolorum eos possimus esse rem porro voluptas mollitia quidem, sequi odio voluptate.</p>
+                            <h1>ini adalah h1</h1>
+                            <ul>
+                                <li>step1</li>
+                                <li>step1</li>
+                                <li>step1</li>
+                                <li>step1</li>
+                                <li>step1</li>
+                                <li>step1</li>
+                            </ul>
+                            <ol>
+                                <li>nomor1</li>
+                                <li>nomor1</li>
+                                <li>nomor1</li>
+                                <li>nomor1</li>
+                                <li>nomor1</li>
+                                <li>nomor1</li>
+                                <li>nomor1</li>
+                                <li>nomor1</li>
+                            </ol>
                             <p class="blog-2-line-p"><strong> Most Powerful Hosting Plans</strong> quis nostrud exercitation  nisi ut aliquip ex arvel theme dolor sit amet, elit,dolore eu fugiat nulla pariaturdolore eu fugiat nulla pariatur sed do eiusmod tempor incididunt ut labore etdoloreasdes magna aliqua. Ut enim ad minim <span style="text-decoration: underline; color: #3464e0;position: inherit;padding: 0;font-size: 14px;">@veniam</span>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodalo consequat. Duis aute irure dolor in  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit</p>
                             <p><strong>How to manage your cloud server</strong> architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit <span style="text-decoration: underline; color: #3464e0;position: inherit;padding: 0;font-size: 14px;">aspernaturei</span>  aut odit aut fugit, sed quia consequuntur magni dolores eos qui Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.</p>
                             <p>Ut enim ad minim veniam,ullamco commodalo laboris nisi ultra <a href="#" style="text-decoration: none; color: #3464e0;position: inherit;padding: 0;font-size: 14px;">www.marveltheme.com</a>  commodalo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
