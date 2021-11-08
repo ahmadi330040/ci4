@@ -25,8 +25,8 @@
         </div>
         <div class="card-body">
           <div class="table-responsive">
-          <?php if(session()->getFlashdata('pesan')) : ?>
-            <div class="alert alert-success" role="alert"><?= session()->getFlashdata('pesan'); ?></div>
+            <?php if(session()->getFlashdata('pesan')) : ?>
+              <div class="alert alert-success" role="alert"><?= session()->getFlashdata('pesan'); ?></div>
             <?php endif; ?>
             <table id="add-row" class="display table table-striped table-hover">
               <thead>
@@ -44,8 +44,8 @@
                   <td><?= $d['judul_trx']; ?></td>
                   <td><?= $d['format_trx']; ?></td>
                   <td>
-                    <a href="edit-users/" class="btn btn-success badge rounded-pill btn-xs"><i class="fas fa-edit"></i> edit</a>
-                    <form action="/admin/panduan-transaksi/<?= $d['id']; ?>" method="post" class="d-inline">
+                    <a href="/admin/panduan-transaksi/detail/<?= $d['id']; ?>" class="btn btn-success badge rounded-pill btn-xs"><i class="fas fa-edit"></i> edit</a>
+                    <form action="/admin/panduan-transaksi/delete/<?= $d['id']; ?>" method="post" class="d-inline">
                       <?= csrf_field(); ?>
                       <input type="hidden" name="_method" value="DELETE">
                       <button type="submit" class="btn btn-danger badge rounded-pill btn-xs" onclick="return confirm('Apakah yakin akan dihapus?');">Hapus</button>

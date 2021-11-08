@@ -9,7 +9,7 @@
         <h2 class="text-white pb-2 fw-bold">Blogs</h2>
       </div>
       <div class="ml-md-auto py-2 py-md-0">
-        <a href="/register-users" class="btn btn-danger btn-round"><i class="fa fa-plus"></i> Tambah Blog</a>
+        <a href="/admin/blog/tambah-blog" class="btn btn-danger btn-round"><i class="fa fa-plus"></i> Tambah Blog</a>
       </div>
     </div>
   </div>
@@ -44,9 +44,9 @@
                   <td><?= $b['judul']; ?></td>
                   <td><?= $b['author']; ?></td>
                   <td>
-                    <a href="edit-users/<%= userModel._id %>" class="btn btn-success badge rounded-pill btn-xs"><i class="fas fa-edit"></i> edit</a>
+                    <a href="/admin/blog/detail/<?= $b['id']; ?>" class="btn btn-success badge rounded-pill btn-xs"><i class="fas fa-edit"></i> edit</a>
                     <form action="/daftar-users?_method=DELETE" method="POST" class="d-inline" onclick="return confirm('yakin akan dihapus?')">
-                      <input type="hidden" name="_id" value="<%= userModel._id %>" />
+                      <input type="hidden" name="_id" value="<?= $b['id']; ?>" />
                       <button type="submit" class="btn btn-danger badge rounded-pill btn-xs"><i class="fas fa-trash-alt"></i> hapus</button>
                     </form>
                   </td>

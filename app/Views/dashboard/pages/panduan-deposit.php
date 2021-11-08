@@ -44,9 +44,10 @@
                   <td><?= $d['nama_bank']; ?></td>
                   <td><?= $d['nama_rekening']; ?></td>
                   <td>
-                    <a href="edit-users/" class="btn btn-success badge rounded-pill btn-xs"><i class="fas fa-edit"></i> edit</a>
-                    <form action="/daftar-users?_method=DELETE" method="POST" class="d-inline" onclick="return confirm('yakin akan dihapus?')">
-                      <input type="hidden" name="_id" value="" />
+                    <a href="/admin/panduan-deposit/detail/<?= $d['id']; ?>" class="btn btn-success badge rounded-pill btn-xs"><i class="fas fa-edit"></i> edit</a>
+                    <form action="/admin/panduan-deposit/delete/<?= $d['id']; ?>" method="POST" class="d-inline" onclick="return confirm('yakin akan dihapus?')">
+                      <?= csrf_field(); ?>
+                      <input type="hidden" name="_method" value="DELETE">
                       <button type="submit" class="btn btn-danger badge rounded-pill btn-xs"><i class="fas fa-trash-alt"></i> hapus</button>
                     </form>
                   </td>

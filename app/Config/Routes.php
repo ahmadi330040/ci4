@@ -45,14 +45,23 @@ $routes->get('/blog-detail', 'Pages::blogDetail');
 $routes->get('/admin', 'Admin/Home::index');
 
 $routes->get('/admin/blog', 'Admin/Blog::index');
+$routes->get('/admin/blog/tambah-blog', 'Admin/Blog::tambahBlog');
+$routes->get('/admin/blog/detail/(:num)', 'Admin\Blog::detail/$1');
 
 $routes->get('/admin/panduan-deposit', 'Admin/PanduanDeposit::index');
 $routes->get('/admin/tambah-panduan-deposit', 'Admin/PanduanDeposit::tambahPanduan');
+$routes->post('/tambah-panduan-deposit/save', 'Admin/PanduanDeposit::save');
+$routes->delete('/admin/panduan-deposit/delete/(:num)', 'Admin\PanduanDeposit::delete/$1');
+$routes->get('/admin/panduan-deposit/detail/(:num)', 'Admin\PanduanDeposit::detail/$1');
+$routes->post('/admin/panduan-deposit/update/(:num)', 'Admin\PanduanDeposit::update/$1');
+
 
 $routes->get('/admin/panduan-transaksi', 'Admin/PanduanTransaksi::index');
-$routes->delete('/admin/panduan-transaksi/(:num)', 'Admin/PanduanTransaksi::delete/$1');
+$routes->delete('/admin/panduan-transaksi/delete/(:num)', 'Admin\PanduanTransaksi::delete/$1');
 $routes->get('/admin/tambah-panduan-transaksi', 'Admin/PanduanTransaksi::tambahPanduan');
 $routes->post('/tambah-panduan-transaksi/save', 'Admin/PanduanTransaksi::save');
+$routes->get('/admin/panduan-transaksi/detail/(:num)', 'Admin\PanduanTransaksi::detail/$1');
+$routes->post('/admin/panduan-transaksi/update/(:num)', 'Admin\PanduanTransaksi::update/$1');
 
 
 

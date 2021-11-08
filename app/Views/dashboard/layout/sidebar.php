@@ -3,7 +3,7 @@
                 <div class="sidebar-content">
                 <div class="user">
                     <div class="avatar-sm float-left mr-2">
-                    <img src="../../dashboard/assets/img/profile2.jpg" alt="..." class="avatar-img rounded-circle" />
+                    <img src="../../../dashboard/assets/img/profile2.jpg" alt="..." class="avatar-img rounded-circle" />
                     </div>
                     <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">

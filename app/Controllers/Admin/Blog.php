@@ -26,5 +26,15 @@ protected $BlogModel;
         return view('dashboard/pages/blogs', $data,);
         }
     }
+
+    public function tambahBlog()
+    {
+        echo('hello');
+    }
+
+    public function detail($id)
+    {
+        dd($id);
+    }
     
 }

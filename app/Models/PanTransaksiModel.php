@@ -10,8 +10,11 @@ class PanTransaksiModel extends Model
     protected $useTimestaps = true;
     protected $allowedFields = ['judul_trx','format_trx','contoh_trx'];
 
-    public function getPanduanTransaksi()
+    public function getPanduanTransaksi($id = false)
     {
-            return $this->findAll();
+            if ($id == false) {
+                return $this->findAll();
+            }
+            return $this->where(['id' => $id])->first();
     }
 }

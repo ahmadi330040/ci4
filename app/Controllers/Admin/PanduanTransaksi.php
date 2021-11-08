@@ -59,5 +59,31 @@ protected $PanTransaksiModel;
 
         return redirect()->to('/admin/panduan-transaksi');
     }
+
+    public function detail($id) 
+    {
+        $data = [
+            'title' => 'Edit data',
+            'validation' => \Config\Services::validation(),
+            'panduantransaksi' => $this->PanTransaksiModel->getPanduanTransaksi($id)
+        ];
+
+        return view('/dashboard/pages/edit-panduan-transaksi', $data);
+        // dd($data);
+    }
+
+    public function update($id)
+    {
+        $this->PanTransaksiModel->save([
+            'id' => $id,
+            'judul_trx' => $this->request->getVar('judul_trx'),
+            'format_trx' => $this->request->getVar('format_trx'),
+            'contoh_trx' => $this->request->getVar('contoh_trx')
+        ]);
+
+        session()->setFlashdata('pesan', 'Data berhasil diubah');
+
+        return redirect()->to('/admin/panduan-transaksi');
+    }
     
 }
