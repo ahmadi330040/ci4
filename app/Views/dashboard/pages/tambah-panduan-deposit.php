@@ -27,7 +27,7 @@
                 <?= csrf_field(); ?>
                 <div class="mb-3">
                     <label for="img_bank" class="form-label">Pilih Gambar</label>
-                    <div class="col-sm-2 my-3">
+                    <div class="col-sm-4 my-3">
                         <img src="/img/default.jpg" class="img-thumbnail img-preview">
                     </div>
                     <label for="img_bank" class="form-label my-1">*Ukuran : 95x30</label>

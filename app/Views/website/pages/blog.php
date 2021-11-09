@@ -40,11 +40,12 @@
     <section class="latest-blog-area blog-section-area">
         <div class="container">
             <div class="row">
+               <?php foreach($blog as $b) :  ?>
                <div class="col-md-6 col-sm-12">
                   <div class="single-blog mb-60">
                      <div class="single-blog-image">
                         <a href="#">
-                        <img src="asset/img/blog/blog-full-page-bg-2.jpg" alt="blog-img">
+                        <img src="/img/<?= $b['imgpath'] ?>" alt="blog-img">
                         </a>
                      </div>
                      <div class="blog-box-content">
@@ -52,228 +53,28 @@
                            <li>
                               <span class="meta-wrap author-meta">
                               By:
-                              <a href="#">
-                              Jhony Deep </a>
+                              <a href="#"><?= $b['author'] ?></a>
                               </span>
                            </li>
                            <li>
                               <span class="meta-wrap">
-                              <a href="#"> Sep. 02, 2019 </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> 0 Comments</a>
+                              <a href="#"><?= $b['date'] ?> </a>
                               </span>
                            </li>
                         </ul>
                         <a href="#">
-                           <h3>Most tech influential people of 2019</h3>
+                           <h3><?= $b['judul']; ?></h3>
                         </a>
                         <div class="blog-excerpt">
-                            <p>Most Powerful Hosting Plans quis nostrud exercitation ullamco laboris nisi ut aliquip ex arvel theme dolor sit amet</p>
+                            <p><?= $b['deskripsi_display'] ?></p>
                         </div>
                         <div class="post-permalink">
-                           <a class="read-more-btn" href="/blog-detail">Read more</a>
+                           <a class="read-more-btn" href="/blog-detail/<?= $b['slug']; ?>">Read more</a>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-md-6 col-sm-12">
-                  <div class="single-blog mb-60">
-                     <div class="single-blog-image">
-                        <a href="#">
-                        <img src="asset/img/blog/blog-details-page-bg.jpg" alt="blog-img">
-                        </a>
-                     </div>
-                     <div class="blog-box-content">
-                        <ul class="post-meta">
-                           <li>
-                              <span class="meta-wrap author-meta">
-                              By:
-                              <a href="#">
-                              Jhony Deep </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> Sep. 02, 2019 </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> 0 Comments</a>
-                              </span>
-                           </li>
-                        </ul>
-                        <a href="#">
-                           <h3>Most tech company doesn’t  require CS degrees</h3>
-                        </a>
-                        <div class="blog-excerpt">
-                            <p>Most Powerful Hosting Plans quis nostrud exercitation ullamco laboris nisi ut aliquip ex arvel theme dolor sit amet</p>
-                        </div>
-                        <div class="post-permalink">
-                           <a class="read-more-btn" href="#">Read more</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-6 col-sm-12">
-                  <div class="single-blog mb-60">
-                     <div class="single-blog-image">
-                        <a href="#">
-                        <img src="asset/img/blog/blog-full-page-bg-3.jpg" alt="blog-img">
-                        </a>
-                     </div>
-                     <div class="blog-box-content">
-                        <ul class="post-meta">
-                           <li>
-                              <span class="meta-wrap author-meta">
-                              By:
-                              <a href="#">
-                              Jhony Deep </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> Sep. 02, 2019 </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> 0 Comments</a>
-                              </span>
-                           </li>
-                        </ul>
-                        <a href="#">
-                           <h3>Charting is the real and pure beauty</h3>
-                        </a>
-                        <div class="blog-excerpt">
-                            <p>Most Powerful Hosting Plans quis nostrud exercitation ullamco laboris nisi ut aliquip ex arvel theme dolor sit amet</p>
-                        </div>
-                        <div class="post-permalink">
-                           <a class="read-more-btn" href="#">Read more</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-6 col-sm-12">
-                  <div class="single-blog mb-60">
-                     <div class="single-blog-image">
-                        <a href="#">
-                        <img src="asset/img/blog/blog-full-page-bg-4.jpg" alt="blog-img">
-                        </a>
-                     </div>
-                     <div class="blog-box-content">
-                        <ul class="post-meta">
-                           <li>
-                              <span class="meta-wrap author-meta">
-                              By:
-                              <a href="#">
-                              Jhony Deep </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> Sep. 02, 2019 </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> 0 Comments</a>
-                              </span>
-                           </li>
-                        </ul>
-                        <a href="#">
-                           <h3>The Admin Template is on the way</h3>
-                        </a>
-                        <div class="blog-excerpt">
-                            <p>Most Powerful Hosting Plans quis nostrud exercitation ullamco laboris nisi ut aliquip ex arvel theme dolor sit amet</p>
-                        </div>
-                        <div class="post-permalink">
-                           <a class="read-more-btn" href="#">Read more</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-6 col-sm-12">
-                  <div class="single-blog">
-                     <div class="single-blog-image">
-                        <a href="#">
-                        <img src="asset/img/blog/blog-full-page-bg-5.jpg" alt="blog-img">
-                        </a>
-                     </div>
-                     <div class="blog-box-content">
-                        <ul class="post-meta">
-                           <li>
-                              <span class="meta-wrap author-meta">
-                              By:
-                              <a href="#">
-                              Jhony Deep </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> Sep. 02, 2019 </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> 0 Comments</a>
-                              </span>
-                           </li>
-                        </ul>
-                        <a href="#">
-                           <h3>See the world through the wallpapers</h3>
-                        </a>
-                        <div class="blog-excerpt">
-                            <p>Most Powerful Hosting Plans quis nostrud exercitation ullamco laboris nisi ut aliquip ex arvel theme dolor sit amet</p>
-                        </div>
-                        <div class="post-permalink">
-                           <a class="read-more-btn" href="#">Read more</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-6 col-sm-12">
-                  <div class="single-blog">
-                     <div class="single-blog-image">
-                        <a href="#">
-                        <img src="asset/img/blog/blog-full-page-bg-6.jpg" alt="blog-img">
-                        </a>
-                     </div>
-                     <div class="blog-box-content">
-                        <ul class="post-meta">
-                           <li>
-                              <span class="meta-wrap author-meta">
-                              By:
-                              <a href="#">
-                              Jhony Deep </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> Sep. 02, 2019 </a>
-                              </span>
-                           </li>
-                           <li>
-                              <span class="meta-wrap">
-                              <a href="#"> 0 Comments</a>
-                              </span>
-                           </li>
-                        </ul>
-                        <a href="#">
-                           <h3>Hello world! Hosting Plans quis exercitation</h3>
-                        </a>
-                        <div class="blog-excerpt">
-                            <p>Most Powerful Hosting Plans quis nostrud exercitation ullamco laboris nisi ut aliquip ex arvel theme dolor sit amet</p>
-                        </div>
-                        <div class="post-permalink">
-                           <a class="read-more-btn" href="#">Read more</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               <?php endforeach; ?>
             </div>
         </div>
     </section>

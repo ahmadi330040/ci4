@@ -39,53 +39,15 @@
     <section class="blog-details latest-blog-area wow fadeUpIn" data-wow-duration="2s" data-wow-delay="0.2s">
         <div class="container">
             <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="col-sm-12 text-center m-3">
-                            <img class="mb-3" src="asset/img/bank-deposit/bca.png" alt="">
-                            <h5>Bank BCA</h5>
-                        </div>
-                        <p class="text-center">Nomor rekening : 8145163982 <br> Nama rekening : Maza Yudha Erlanda</p>
+                <?php foreach ($deposit as $d) : ?>
+                <div class="col-lg-4">
+                    <div class="col-sm-12 text-center m-3">
+                        <img class="mb-3" src="/img/<?= $d['img_bank'] ?>" alt="">
+                        <h5><?= $d['nama_bank'] ?></h5>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="col-sm-12 text-center m-3">
-                            <img class="mb-3" src="asset/img/bank-deposit/bni.png" alt="">
-                            <h5>Bank BNI</h5>
-                        </div>
-                        <p class="text-center">Nomor rekening : 0291183295 <br> Nama rekening : Maza Yudha Erlanda</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="col-sm-12 text-center m-3">
-                            <img class="mb-3" src="asset/img/bank-deposit/mandiri.png" alt="">
-                            <h5>Bank MANDIRI</h5>
-                        </div>
-                        <p class="text-center">Nomor rekening : 1480017926679 <br> Nama rekening : Maza Yudha Erlanda</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="col-sm-12 text-center m-3">
-                            <img class="mb-3" src="asset/img/bank-deposit/bri.png" alt="">
-                            <h5>Bank BRI</h5>
-                        </div>
-                        <p class="text-center">Nomor rekening : 457001000006564 <br> Nama rekening : Maza Yudha Erlanda</p>
-                    </div><div class="col-lg-4">
-                        <div class="col-sm-12 text-center m-3">
-                            <img class="mb-3" src="asset/img/bank-deposit/bsi.png" alt="">
-                            <h5>Bank BSI</h5>
-                        </div>
-                        <p class="text-center">Nomor rekening : 7146113359 <br> Nama rekening : Maza Yudha Erlanda</p>
-                    </div><div class="col-lg-4">
-                        <div class="col-sm-12 text-center m-3">
-                            <img class="mb-3" src="asset/img/bank-deposit/btpn-jenius.png" alt="">
-                            <h5>Bank BTPN JENIUS</h5>
-                        </div>
-                        <p class="text-center">Nomor rekening : 90220023846 <br> Nama rekening : Maza Yudha Erlanda</p>
-                    </div><div class="col-lg-4">
-                        <div class="col-sm-12 text-center m-3">
-                            <img class="mb-3" src="asset/img/bank-deposit/bpd-kalimtara.png" alt="">
-                            <h5>Bank BPD KALIMTARA</h5>
-                        </div>
-                        <p class="text-center">Nomor rekening : 0042580899 <br> Nama rekening : Maza Yudha Erlanda</p>
-                    </div>
-                    
+                    <p class="text-center">Nomor rekening : <?= $d['nomor_rekening'] ?> <br> Nama rekening : <?= $d['nama_rekening'] ?></p>
+                </div>
+                <?php endforeach; ?>  
             </div>
             <hr class="mt-5">
         </div>
@@ -103,22 +65,12 @@
                         </div>
                     </div>
                 </div>
+                <?php foreach ($transaksi as $t) : ?>
                 <div class="col-lg-4">
-                    <p class="text-start"><i class="fas fa-check" style="color: green; margin-right: 35px;"></i>Format Cek Saldo</p>
-                    <p class="text-start" style="margin-left: 50px;">Ketik : SAL</p>
+                    <p class="text-start"><i class="fas fa-check" style="color: green; margin-right: 35px;"></i><?= $t['judul_trx']; ?></p>
+                    <p class="text-start" style="margin-left: 50px;">Ketik : <?= $t['format_trx']; ?><br>Contoh : <?= $t['contoh_trx']; ?></p>
                 </div>
-                <div class="col-lg-4">
-                    <p class="text-start"><i class="fas fa-check" style="color: green; margin-right: 35px;"></i>Format Tiket Deposit</p>
-                    <p class="text-start" style="margin-left: 50px;">Ketik : [TIKET].[nominal].[pin]<br>Contoh : TIKET.1000000.1234</p>
-                </div>
-                <div class="col-lg-4">
-                    <p class="text-start"><i class="fas fa-check" style="color: green; margin-right: 35px;"></i>Format Isi Pulsa</p>
-                    <p class="text-start" style="margin-left: 50px;">Ketik : [nominal].[tujuan].[pin]<br>Contoh : 10.081391800081.1234</p>
-                </div>
-                <div class="col-lg-4">
-                    <p class="text-start"><i class="fas fa-check" style="color: green; margin-right: 35px;"></i>Format Isi Pulsa ke-2</p>
-                    <p class="text-start" style="margin-left: 50px;">Ketik : [nominal].[counter].[tujuan].[pin]<br>Contoh : 10.2.081391800081.1234</p>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
         

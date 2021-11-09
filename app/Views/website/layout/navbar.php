@@ -29,7 +29,7 @@
                <div class="row">
                   <div class="col-md-2">
                      <div class="logo">
-                        <a href="index.html"><img src="asset/img/logo/mypay-logo.png" alt="logo"></a>
+                        <a href="index.html"><img src="../../asset/img/logo/mypay-logo.png" alt="logo"></a>
                      </div>
                   </div>
                   <div class="col-md-10">

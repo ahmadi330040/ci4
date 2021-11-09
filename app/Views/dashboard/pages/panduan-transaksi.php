@@ -48,7 +48,7 @@
                     <form action="/admin/panduan-transaksi/delete/<?= $d['id']; ?>" method="post" class="d-inline">
                       <?= csrf_field(); ?>
                       <input type="hidden" name="_method" value="DELETE">
-                      <button type="submit" class="btn btn-danger badge rounded-pill btn-xs" onclick="return confirm('Apakah yakin akan dihapus?');">Hapus</button>
+                      <button type="submit" class="btn btn-danger badge rounded-pill btn-xs" onclick="return confirm('Apakah yakin akan dihapus?');"><i class="fas fa-trash"></i> Hapus</button>
                     </form>
                   </td>
                 </tr>

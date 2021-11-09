@@ -29,7 +29,7 @@
                 <input type="hidden" name="id" value="<?= $panduandeposit['id']; ?>">
                 <div class="mb-3">
                     <label for="img_bank" class="form-label">Pilih Gambar</label>
-                    <div class="col-sm-2 my-3">
+                    <div class="col-sm-4 my-3">
                         <img src="../../../img/<?= $panduandeposit['img_bank'] ?>" class="img-thumbnail img-preview">
                         <label class="my-1" for="lblPrev"><?= $panduandeposit['img_bank'] ?></label>
                     </div>

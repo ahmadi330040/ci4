@@ -44,10 +44,11 @@
                   <td><?= $b['judul']; ?></td>
                   <td><?= $b['author']; ?></td>
                   <td>
-                    <a href="/admin/blog/detail/<?= $b['id']; ?>" class="btn btn-success badge rounded-pill btn-xs"><i class="fas fa-edit"></i> edit</a>
-                    <form action="/daftar-users?_method=DELETE" method="POST" class="d-inline" onclick="return confirm('yakin akan dihapus?')">
-                      <input type="hidden" name="_id" value="<?= $b['id']; ?>" />
-                      <button type="submit" class="btn btn-danger badge rounded-pill btn-xs"><i class="fas fa-trash-alt"></i> hapus</button>
+                    <a href="/admin/blog/detail/<?= $b['slug']; ?>" class="btn btn-success badge rounded-pill btn-xs"><i class="fas fa-edit"></i> edit</a>
+                    <form action="/admin/blog/delete/<?= $b['id']; ?>" method="post" class="d-inline">
+                      <?= csrf_field(); ?>
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button type="submit" class="btn btn-danger badge rounded-pill btn-xs" onclick="return confirm('Apakah yakin akan dihapus?');"><i class="fas fa-trash"></i> Delete</button>
                     </form>
                   </td>
                 </tr>

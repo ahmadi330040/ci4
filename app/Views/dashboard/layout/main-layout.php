@@ -127,6 +127,19 @@
     <script src="../../../dashboard/assets/js/setting-demo.js"></script>
     <script src="../../../dashboard/assets/js/demo.js"></script>
     <script src="../../../js/preview.js"></script>
+    <script src="../../../js/preview-blog.js"></script>
+    
+    <!-- ckeditor -->
+    <script src="../../../ckeditor_4/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript">
+    CKEDITOR.replace("content", {
+        extraPlugins: "codesnippet",
+        codeSnippet_theme: "monokai_sublime",
+    });
+    CKEDITOR.add;
+    </script>
+
+    <!-- endckeditor -->
     <script>
         // paging content and filter data
         $(document).ready(function () {

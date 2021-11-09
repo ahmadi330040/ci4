@@ -2,8 +2,24 @@
 
 namespace App\Controllers;
 
+use App\Models\PanDepositModel;
+use App\Models\PanTransaksiModel;
+use App\Models\BlogModel;
+
 class Pages extends BaseController
 {
+
+protected $PanDepositModel;
+protected $PanTransaksiModel;
+protected $BlogModel;
+
+    public function __construct()
+    {
+        $this->PanDepositModel = new PanDepositModel();
+        $this->PanTransaksiModel = new PanTransaksiModel();
+        $this->BlogModel = new BlogModel();
+    }
+
     public function index()
     {
         $data = [
@@ -29,21 +45,26 @@ class Pages extends BaseController
     public function panduan()
     {
         $data = [
-            'title' => 'Panduan'
+            'title' => 'Panduan',
+            'deposit' => $this->PanDepositModel->getPanduanDeposit(),
+            'transaksi' => $this->PanTransaksiModel->getPanduanTransaksi(),
         ];
         return view('website/pages/panduan', $data);
     }
     public function blog()
     {
         $data = [
-            'title' => 'Blogs'
+            'title' => 'Blogs',
+            'blog' => $this->BlogModel->getBlog()
         ];
         return view('website/pages/blog', $data);
     }
-    public function blogDetail()
+    public function blogDetail($slug)
     {
         $data = [
-            'title' => 'Blogs'
+            'title' => 'Blogs',
+            'blog' => $this->BlogModel->getBlog($slug),
+            'blogall' => $this->BlogModel->getBlog()
         ];
         return view('website/pages/blog-detail', $data);
     }

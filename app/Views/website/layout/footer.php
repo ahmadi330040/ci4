@@ -6,7 +6,7 @@
                   <div class="col-lg-3 col-md-12 col-12">
                      <div class="footer-single-item">
                         <div class="logo">
-                           <a href="index.html"><img src="asset/img/logo/mypay-logo.png" alt="logo"></a>
+                           <a href="index.html"><img src="../../asset/img/logo/mypay-logo.png" alt="logo"></a>
                         </div>
                         <p class="contact-info"><span>Phone:</span><a href="tel:+6282352513472" class="inactiveLink">+6282352513472</a></p>
                         <p class="contact-info"><span>Email:</span><a href="mailto:mycellpertama@gmail.com" class="inactiveLink">mycellpertama@gmail.com</a> </p>

@@ -6720,6 +6720,25 @@ span.meta-wrap a:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
+.blog-box-content h1,h2,h3,h4,h5 {
+  font-size: 20px;
+  margin: 1rem;
+}
+
+.blog-box-content p {
+  text-align: left;
+}
+
+.blog-box-content ol li {
+  text-align: left;
+}
+
+.blog-box-content ul li {
+  text-align: left;
+}
+
+
 section.blog-details.latest-blog-area .single-blog-box {
   border-radius: 0px;
 }
@@ -7234,7 +7253,6 @@ html .ui-button.ui-state-disabled:active {
   padding: 0 30px;
 }
 .blog-details .single-blog-box p {
-  padding: 0 30px;
   margin: 0 0 30px;
   text-align: left;
   font-size: 14px;

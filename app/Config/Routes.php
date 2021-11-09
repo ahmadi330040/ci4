@@ -39,7 +39,7 @@ $routes->get('/produk', 'Pages::produk');
 $routes->get('/contact', 'Pages::contact');
 $routes->get('/panduan', 'Pages::panduan');
 $routes->get('/blog', 'Pages::blog');
-$routes->get('/blog-detail', 'Pages::blogDetail');
+$routes->get('/blog-detail/(:segment)', 'Pages::blogDetail/$1');
 
 // Halaman admin
 $routes->get('/admin', 'Admin/Home::index');
@@ -47,6 +47,9 @@ $routes->get('/admin', 'Admin/Home::index');
 $routes->get('/admin/blog', 'Admin/Blog::index');
 $routes->get('/admin/blog/tambah-blog', 'Admin/Blog::tambahBlog');
 $routes->get('/admin/blog/detail/(:num)', 'Admin\Blog::detail/$1');
+$routes->post('/admin/blog/tambah-blog/save', 'Admin\Blog::save');
+$routes->post('/admin/blog/tambah-blog/update/(:num)', 'Admin\Blog::update/$1');
+$routes->delete('/admin/blog/delete', 'Admin\Blog::delete/$1');
 
 $routes->get('/admin/panduan-deposit', 'Admin/PanduanDeposit::index');
 $routes->get('/admin/tambah-panduan-deposit', 'Admin/PanduanDeposit::tambahPanduan');
